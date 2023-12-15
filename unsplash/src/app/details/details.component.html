@@ -1,0 +1,7 @@
+<div *ngIf="isLoading">Loading...</div>
+<div *ngIf="!isLoading && imageDetails">
+  <h2>{{ imageDetails.description || 'Image Details' }}</h2>
+  <img [src]="imageDetails.urls.regular" alt="{{ imageDetails.description }}">
+  <p>Photographer: {{ imageDetails.user.name }}</p>
+  <!-- Add extra here-->
+</div>

@@ -1,0 +1,7 @@
+<form (submit)="onSearch()">
+    <input type="text" [(ngModel)]="searchQuery" name="search" >
+    <button type="submit">Search</button>
+  </form>
+  <div *ngFor="let image of images">
+    <img [src]="image.urls.small" [alt]="image.description">
+  </div>
