@@ -1,7 +1,27 @@
-<form (submit)="onSearch()">
-    <input type="text" [(ngModel)]="searchQuery" name="search" >
-    <button type="submit">Search</button>
+<div class="search-container">
+
+  <form (submit)="onSearch()" class="search-form">
+    <input type="text" [(ngModel)]="searchQuery" name="search" placeholder="Search images..." class="search-input">
+    <button type="submit" class="search-button">Search</button>
   </form>
-  <div *ngFor="let image of images">
-    <img [src]="image.urls.small" [alt]="image.description">
+
+  <div *ngIf="errorMessage" class="error-message">
+    {{ errorMessage }}
+
+    <p>403 error indicates that the API search limit has been reached for this hour</p>
+
+    
   </div>
+
+  <div class="image-results">
+    <div *ngFor="let image of images" class="image-container" (click)="onImageClick(image.id)">
+      <img [src]="image.urls.small" [alt]="image.description" [title]="image.description || 'No Description available for this image'"  class="image" >
+    </div>
+  </div>
+
+  <div *ngIf="loadingMoreContent" class="loading-indicator">
+    <mat-icon class="loading-icon" fontIcon="sync">Loading...</mat-icon>
+  </div>
+
+  
+</div>

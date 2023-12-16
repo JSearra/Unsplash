@@ -1,4 +1,55 @@
-/* You can add global styles to this file, and also import other style files */
+// Define common variables
+:root {
+    --text-color: #333;
+    --background-color: #00B5AD;
+    --gradient-left: #00B5AD;
+    --gradient-right: #17477C;
+  
+    // Light mode variables
+    --light-text-color: #333;
+    --light-background-color: #fff;
+    --light-gradient-left: #00B5AD;
+    --light-gradient-right: #17477C;
+  
+    // Dark mode variables
+    --dark-text-color: #fff;
+    --dark-background-color: #212529;
+    --dark-gradient-left: #000;
+    --dark-gradient-right: #111;
+    
+
+  }
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { font-family: Roboto, "Helvetica Neue", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color); // Fallback colour
+    background-image: linear-gradient(to right, 
+        var(--gradient-left), 
+        var(--gradient-right));
+    color: var(--light-text-color)
+
+}
+
+// Dark mode styles
+body.dark-mode {
+    --text-color: var(--dark-text-color);
+    --background-color: var(--dark-background-color);
+    background-image: linear-gradient(to right, 
+        var(--dark-gradient-left), 
+        var(--dark-gradient-right));
+
+
+        input {
+            background-color: #333; /* Dark background for the input */
+            color: #fff; /* Light text color */
+            border-color: #555; /* Darker border */
+        }
+
+        
+    
+  }
+
+
+

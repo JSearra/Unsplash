@@ -1,0 +1,14 @@
+<header class="app-header" [ngClass]="{'header': true, 'dark-mode': isDarkMode}">
+    <img src="../../assets/images/gbtec-logo-blue.svg" alt="GBTEC" class="logo">
+
+
+    <div class="darkmode-wrapper">
+
+        <mat-button-toggle-group name="dark-mode" aria-label="Dark Mode">
+            <mat-button-toggle value="red" (click)="toggleDarkMode()">{{ isDarkMode ? 'Light Mode' : 'Dark Mode' }}</mat-button-toggle>            
+          </mat-button-toggle-group>
+    </div>
+    <nav>
+        
+    </nav>
+  </header>

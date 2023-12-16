@@ -1,0 +1,30 @@
+header {
+    background-color: #fff;
+    padding-top: 1.5625rem;
+    padding-bottom: 1.5625rem;
+    display: flex;
+    justify-content: space-between;
+    
+    align-items: flex-start;
+    margin-left: auto;
+    margin-right: auto;
+    color: #333;
+    
+  }
+
+  .app-header.dark-mode {
+    background-color: #000; /* Dark mode background */
+    color: #fff; /* Dark mode text color */
+  }
+  
+  .logo {
+    max-width: 5rem;
+    margin-left:20px;
+
+    }
+
+  .darkmode-wrapper {
+    margin-left:auto;
+    margin-right:20px;
+    }
+

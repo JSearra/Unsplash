@@ -1,7 +1,11 @@
-<div *ngIf="isLoading">Loading...</div>
-<div *ngIf="!isLoading && imageDetails">
-  <h2>{{ imageDetails.description || 'Image Details' }}</h2>
-  <img [src]="imageDetails.urls.regular" alt="{{ imageDetails.description }}">
-  <p>Photographer: {{ imageDetails.user.name }}</p>
-  <!-- Add extra here-->
+
+<div *ngIf="imageDetails" class="image-details">
+  <img [src]="imageDetails.urls.regular" alt="{{ imageDetails.description }}" class="image">
+
+  <div class="info-section">
+    <h2>{{ imageDetails.description || 'No Description' }}</h2>
+    <p><strong>Photographer:</strong> {{ imageDetails.user.name }}</p>
+    <p><strong>Published on:</strong> {{ imageDetails.created_at | date }}</p>
+    <!-- Add more fields as required -->
+  </div>
 </div>

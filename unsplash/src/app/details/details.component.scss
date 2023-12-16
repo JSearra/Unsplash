@@ -1,4 +1,25 @@
-img {
-    max-width: 100%;
-    height: auto;
-  }
+
+
+
+.image-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* This will center the content horizontally */
+  justify-content: center; /* This will center the content vertically if needed */
+  padding: 20px; /* Adds padding around the entire container */
+  min-height: 100vh; /* Optional: Makes the container take up at least the whole viewport height */
+  color: var(--text-color);
+
+}
+
+.image {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px; /* Adds space between the image and the subsequent content */
+  border-radius: 10px;
+}
+
+.info-section {
+  margin-top: 20px;
+  text-align: center;
+}
