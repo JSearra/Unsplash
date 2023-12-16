@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { UnsplashService } from '../services/unsplash.service';
+import { UnsplashService } from '../../services/unsplash.service';
 import { CommonModule } from '@angular/common';
 import { Title } from '@angular/platform-browser';
-import { ImageDetails } from '../interfaces/image-details.interface';
+import { ImageDetails } from '../../interfaces/image-details.interface';
 import { Subscription } from 'rxjs';
 
 

@@ -1,6 +1,6 @@
 import { Component, HostListener, Inject, OnInit, PLATFORM_ID } from '@angular/core';
-import { UnsplashService } from '../services/unsplash.service';
-import { UnsplashImage } from '../interfaces/unsplash-image.interface';
+import { UnsplashService } from '../../services/unsplash.service';
+import { UnsplashImage } from '../../interfaces/unsplash-image.interface';
 import { Router } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 import { isPlatformBrowser } from '@angular/common';

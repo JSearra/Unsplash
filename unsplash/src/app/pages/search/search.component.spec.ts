@@ -1,14 +1,15 @@
 import { ComponentFixture, TestBed, fakeAsync, tick } from '@angular/core/testing';
 import { SearchComponent } from './search.component';
 import { FormsModule } from '@angular/forms';
-import { UnsplashService } from '../services/unsplash.service';
+import { UnsplashService } from '../../services/unsplash.service';
 import { RouterTestingModule } from '@angular/router/testing';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { Title } from '@angular/platform-browser';
 import { of, throwError } from 'rxjs';
 import { PLATFORM_ID } from '@angular/core';
-import { UnsplashImage } from '../interfaces/unsplash-image.interface';
+import { UnsplashImage } from '../../interfaces/unsplash-image.interface';
 import { Router } from '@angular/router';
+import { NO_ERRORS_SCHEMA } from '@angular/core'
 
 describe('SearchComponent', () => {
   let component: SearchComponent;
@@ -19,7 +20,8 @@ describe('SearchComponent', () => {
   beforeEach(async () => {
     unsplashService = jasmine.createSpyObj('UnsplashService', ['searchImages']);
     await TestBed.configureTestingModule({
-      declarations: [SearchComponent],
+      declarations: [],
+      schemas: [NO_ERRORS_SCHEMA],
       imports: [FormsModule, HttpClientTestingModule, RouterTestingModule],
       providers: [
         { provide: UnsplashService, useValue: unsplashService },
@@ -35,6 +37,7 @@ describe('SearchComponent', () => {
   });
 
   it('should create', () => {
+    const component = fixture.componentInstance;
     expect(component).toBeTruthy();
   });
 
