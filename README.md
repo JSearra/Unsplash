@@ -24,6 +24,7 @@ This Angular application provides a user interface for searching and viewing ima
 1. **Clone the Repository**
 
 git clone https://github.com/JSearra/Unsplash.git
+
 cd /unsplash
 
 2. **Install Dependencies**
