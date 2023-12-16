@@ -29,24 +29,22 @@
     }
   }
 
-  .image-results {
+  .images-wrapper {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-
-    .image-container {
-      margin: 10px;
-      border: 1px solid #ddd;
-      border-radius: 4px;
-      overflow: hidden;
-    }
-
-    .image {
-      max-width: 100%;
-      height: auto;
-      display: block;
-      cursor:pointer;
-    }
+  }
+  
+  .image-container {
+    margin-bottom: 20px; /* Spacing between images */
+    cursor: pointer; /* Indicates the image is clickable */
+  }
+  
+  .image {
+    max-width: 100%; /* Ensures image responsiveness */
+    height: auto; /* Maintain aspect ratio */
+    /* Additional styling such as border, shadow, etc., can be added here */
   }
 
 
