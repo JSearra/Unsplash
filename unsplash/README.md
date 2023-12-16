@@ -1,27 +1,65 @@
-# Unsplash
+# Unsplash Image Search Application
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.6.
+## Overview
 
-## Development server
+This Angular application provides a user interface for searching and viewing images from the Unsplash API. It allows users to search for images based on keywords, and view the results in an organized layout.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Features
 
-## Code scaffolding
+- **Image Search**: Users can search for images using keywords.
+- **Search Results Display**: Search results are displayed as a list of images.
+- **Image Details**: Clicking on an image navigates the user to a detailed view of the image.
+- **Responsive Design**: The application is responsive and works on various devices and screen sizes.
+- **Dark Mode**: Users can toggle between light and dark mode for a preferred viewing experience.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Setup and Installation
 
-## Build
+### Prerequisites
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Node.js (latest stable version)
+- npm (comes with Node.js)
 
-## Running unit tests
+### Installation Steps
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. **Clone the Repository**
 
-## Running end-to-end tests
+git clone https://github.com/JSearra/Unsplash.git
+cd /unsplash
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+2. **Install Dependencies**
 
-## Further help
+npm install
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+3. **Environment Configuration**
+
+Set up the `environment.ts` file with the necessary API keys.
+
+4. **Run the Application**
+
+ng serve
+
+The application will be available at `http://localhost:4200/`.
+
+## Application Structure
+
+- `src/app/`
+- `components/`: Contains reusable UI components like headers.
+- `services/`: Contains services for business logic and API calls.
+- `interfaces/`: TypeScript interfaces for data models.
+- `pages/`: Components representing entire pages.
+- `app.component.*`: Root component of the application.
+- `app.module.ts`: Root module of the application.
+- `assets/`: Static assets like images.
+- `environments/`: Environment-specific configurations.
+
+## Usage
+
+- **Search Images**: Enter keywords in the search bar and press enter or click the search button.
+- **View Image Details**: Click on any image to view its details, including a larger version and additional information.
+- **Toggle Dark Mode**: Use the dark mode toggle in the header to switch themes.
+
+## Testing
+
+- **Unit Tests**: Run unit tests using Jasmine and Karma.
+
+ng test
